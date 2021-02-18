@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<center>
+<form action="{{ url_for('index') }}" method="post">
+  <div class="form-group">
+    <label style="font-size:30px" for="exampleInputEmail1">Weather Forecast</label>
+    <input type="text" class="form-control" name="data" placeholder="Enter City">
+  </div>
+  </br>
+  <button type="submit" class="btn btn-primary">RUN</button>
+</form>
+</center>
+{% endblock content %}

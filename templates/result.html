@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<center>
+<form>
+  <div class="form-group">
+    <label  style="font-size:30px" for="exampleInputEmail1">Weather Forecast</label>
+    <input type="text" class="form-control" name="data" placeholder="Enter City">
+  </div>
+  </br>
+  <button type="submit" class="btn btn-primary">RUN</button>
+</form>
+</center>
+
+<center>
+<table class="table">
+  {% for a,b in result.items() %}
+          <tr>
+            <td>{{ a }}</td>
+            <td>{{ b }}</td>
+          </tr>
+  {% endfor %}
+
+</table>
+</center>
+
+{% endblock content %}
